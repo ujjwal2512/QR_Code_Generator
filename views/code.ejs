@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .card {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body style="background-color:rgb(154, 213, 193);">
+    <div class="card" style="width: 20rem;">
+        <img src="<%=QR_code%>" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">URL : <%=nameofURL%>
+            </h5>
+            <p class="card-text">Click below to download the Code</p>
+            <a href="/download?path=<%=src %>" class="btn btn-info">Download</a>
+        </div>
+    </div>
+</body>
+
+</html>
